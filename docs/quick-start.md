@@ -15,7 +15,7 @@ There are several kubeless manifests being shipped for multiple k8s environments
 For example, this below is a show case of deploying kubeless to a Kubernetes cluster (with RBAC available).
 
 ```console
-$ export RELEASE=$(curl -s https://api.github.com/repos/kubeless/kubeless/releases/latest | grep tag_name | cut -d '"' -f 4)
+$ export RELEASE=$(curl -s -L https://api.github.com/repos/vmware-archive/kubeless/releases/latest | grep tag_name | cut -d '"' -f 4)
 $ kubectl create ns kubeless
 $ kubectl create -f https://github.com/kubeless/kubeless/releases/download/$RELEASE/kubeless-$RELEASE.yaml
 
